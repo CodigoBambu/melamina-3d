@@ -32,7 +32,7 @@ const Services = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">
             Nuestros Servicios
           </h2>
-          <div className="w-16 h-1 bg-wood mx-auto mb-6"></div>
+          <div className="w-50 h-1 bg-amber-900 mx-auto mb-6"></div>
           <p className="max-w-2xl mx-auto text-lg text-gray-600">
             Ofrecemos un servicio completo para crear muebles personalizados que
             se adapten perfectamente a tus espacios

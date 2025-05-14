@@ -47,10 +47,10 @@ const Hero = () => {
               específicamente para ti
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-transparent backdrop-blur-sm hover:bg-[#5a4633]">
+              <Button className="text-white bg-transparent backdrop-blur-sm hover:bg-[#5a4633]">
                 Ver Catálogo
               </Button>
-              <Button variant="outline" className="hover:bg-transparent">
+              <Button className="hover:bg-transparent text-white">
                 Solicitar Diseño
               </Button>
             </div>

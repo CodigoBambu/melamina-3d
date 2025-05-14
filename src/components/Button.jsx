@@ -9,7 +9,7 @@ const Button = ({
   className = "",
   ...restProps
 }) => {
-  const buttonClass = `box-shadow text-shadow inline-flex items-center justify-center rounded-md border border-transparent px-4 py-2 text-base font-bold text-white bg-[#5a4633] backdrop-blur-2xl cursor-pointer transtition-all duration-500 hover:scale-105  ${className}`;
+  const buttonClass = `box-shadow inline-flex items-center justify-center rounded-md border border-transparent px-4 py-2 text-base font-bold bg-amber-900/80 backdrop-blur-2xl cursor-pointer transtition-all duration-500 hover:scale-105  ${className}`;
 
   if (href) {
     return (

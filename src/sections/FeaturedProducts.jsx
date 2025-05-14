@@ -46,15 +46,15 @@ const products = [
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 flex flex-col h-full">
-      <div className="h-64 overflow-hidden">
+    <div className="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 flex flex-col h-full cursor-pointer">
+      <div className="h-64 overflow-hidden ">
         <img
           src={product.imageUrl}
           alt={product.name}
-          className="w-full h-full object-cover transition-transform duration-700 hover:scale-110 cursor-pointer"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
       </div>
-      <div className="p-5 flex flex-col flex-1 cursor-pointer">
+      <div className="p-5 flex flex-col flex-1">
         <span className="text-sm font-medium text-wood-dark block mb-1">
           {product.category}
         </span>
@@ -64,7 +64,7 @@ const ProductCard = ({ product }) => {
         </p>
         <div className="mt-auto flex items-center justify-between">
           <span className="text-navy font-semibold">{product.price}</span>
-          <Button variant="outline" size="sm">
+          <Button className="bg-transparent hover:bg-amber-900/80 text-black hover:scale-110 hover:text-white hover:text-shadow">
             Consultar
           </Button>
         </div>
@@ -75,26 +75,26 @@ const ProductCard = ({ product }) => {
 
 const FeaturedProducts = () => {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 ">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-navy mb-3">
             Productos Destacados
           </h2>
-          <div className="w-16 h-1 bg-wood mx-auto mb-6 rounded-full"></div>
+          <div className="w-50 h-1 bg-amber-900 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Descubre nuestra selección de muebles listos para la entrega
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map((product) => (
-            <div className="h-full" key={product.id}>
-              <ProductCard product={product} />
-            </div>
+            <ProductCard key={product.id} product={product} />
           ))}
         </div>
         <div className="text-center mt-12">
-          <Button size="lg">Ver Catálogo Completo</Button>
+          <Button className="text-white hover:bg-transparent hover:text-black">
+            Ver Catálogo Completo
+          </Button>
         </div>
       </div>
     </section>
