@@ -102,7 +102,7 @@ const Design3D = () => {
                 ))}
               </ul>
               <div className="mt-8">
-                <Button variant="primary" size="lg">
+                <Button className="hover:bg-transparent">
                   Solicitar Diseño 3D
                 </Button>
               </div>

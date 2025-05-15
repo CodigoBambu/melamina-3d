@@ -12,6 +12,7 @@ body {
   padding: 0;
   font-family: Arial, sans-serif;
   display: flex;
+  scroll-behavior: smooth;
   flex-direction: column;
 }
 

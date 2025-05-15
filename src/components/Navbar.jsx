@@ -9,7 +9,6 @@ import {
   Phone,
   Rotate3D,
 } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,11 +24,11 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Inicio", path: "/", icon: <Home size={20} /> },
-    { name: "Servicios", path: "/servicios", icon: <Settings size={20} /> },
-    { name: "Catálogo", path: "/catalogo", icon: <ShoppingBag size={20} /> },
-    { name: "Diseños 3D", path: "/disenos-3d", icon: <Package size={20} /> },
-    { name: "Contacto", path: "/contacto", icon: <Phone size={20} /> },
+    { name: "Inicio", href: "#inicio", icon: <Home size={20} /> },
+    { name: "Servicios", href: "#services", icon: <Settings size={20} /> },
+    { name: "Productos", href: "#products", icon: <ShoppingBag size={20} /> },
+    { name: "Diseños 3D", href: "#design", icon: <Package size={20} /> },
+    { name: "Contacto", href: "#contact", icon: <Phone size={20} /> },
   ];
 
   return (
@@ -43,22 +42,22 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
-            <Link
-              to="/"
+            <a
+              href="#inicio"
               className="text-white text-lg font-bold flex hover:text-[#da9f70] hover:scale-105 transition-all duration-500"
             >
               Melamina 3D <Rotate3D className="ml-2" />
-            </Link>
+            </a>
             <div className="hidden md:flex space-x-8">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.name}
-                  to={link.path}
+                  href={link.href}
                   className="text-white hover:text-[#da9f70] hover:scale-105 transition-all duration-500 font-medium flex items-center gap-2"
                 >
                   {link.icon}
                   {link.name}
-                </Link>
+                </a>
               ))}
             </div>
             <button
@@ -77,15 +76,15 @@ const Navbar = () => {
           >
             <div className="flex flex-col space-y-4 py-4 px-2">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.name}
-                  to={link.path}
+                  href={link.href}
                   className="text-white hover:text-[#da9f70] transition-colors duration-300 font-medium py-2 flex items-center gap-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.icon}
                   {link.name}
-                </Link>
+                </a>
               ))}
             </div>
           </div>
